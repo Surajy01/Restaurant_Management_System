@@ -1,0 +1,42 @@
+[
+    {
+        "user_id": "e02c0a5d",
+        "username": "Suraj",
+        "email": "suraj@gmail.com",
+        "dob": "11/06/2003",
+        "address": "kolkata",
+        "password": "s1234",
+        "phoneNo": "1234567890",
+        "role": "Admin"
+    },
+    {
+        "user_id": "a50a8c3a",
+        "username": "pankaj",
+        "email": "p@gmail.com",
+        "dob": "11/04/2000",
+        "address": "pune",
+        "password": "p1234",
+        "phoneNo": "7894512300",
+        "role": "Admin"
+    },
+    {
+        "user_id": "d20a0a9a",
+        "username": "Ram",
+        "email": "ram@gmail.com",
+        "dob": "15/08/1995",
+        "address": "Mumbai",
+        "password": "r1234",
+        "phoneNo": "7894563210",
+        "role": "Customer"
+    },
+    {
+        "user_id": "26d74b87",
+        "username": "abcd",
+        "email": "abcd@gmail.com",
+        "dob": "16/10/1996",
+        "address": "delhi",
+        "password": "a1234",
+        "phoneNo": "4567891230",
+        "role": "Customer"
+    }
+]
