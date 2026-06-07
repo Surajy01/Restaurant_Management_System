@@ -1,0 +1,37 @@
+[
+    {
+        "category": "Breakfast",
+        "id": "9dd67g5a",
+        "name": "Idli",
+        "quantity": "2 Peice",
+        "price": 70.0
+    },
+    {
+        "category": "Lunch",
+        "id": "9ed17e4a",
+        "name": "Rice",
+        "quantity": "Half Plate",
+        "price": 100.0
+    },
+    {
+        "id": "fc66a975",
+        "category": "Dinner",
+        "name": "Naan ",
+        "quantity": "1 Peice",
+        "price": 40.0
+    },
+    {
+        "id": "fa709650",
+        "category": "Breakfast",
+        "name": "Poha",
+        "quantity": "Full Plate",
+        "price": 80.0
+    },
+    {
+        "id": "e337b067",
+        "category": "Breakfast",
+        "name": "coffee",
+        "quantity": "100 ml",
+        "price": 120.0
+    }
+]
