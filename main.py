@@ -1,5 +1,5 @@
 from App.menu.auth_menu import auth_menu
-from App.menu.food_menu import menu_system
+from App.menu.admin_menu import admin_menu
 
 auth_menu()
-# menu_system()
+# admin_menu()

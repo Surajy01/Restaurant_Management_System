@@ -1,9 +1,9 @@
 import json
 import os
 
-FILE_PATH = "App/database/foods.json"
+# FILE_PATH = "App/database/foods.json"
 
-def read_data():
+def read_data(FILE_PATH):
     if not os.path.exists(FILE_PATH):
         return []
 
@@ -13,6 +13,6 @@ def read_data():
     except:
         return []
 
-def write_data(data):
+def write_data(FILE_PATH, data):
     with open(FILE_PATH, "w") as file:
         json.dump(data, file, indent=4)

@@ -1,24 +1,41 @@
-from App.food_menu.view_food import view_food_menu
+# from App.food_menu.view_food import view_food_menu
+# from App.customer.order_place import place_order
 
-
-def customer_menu():
+def customer_menu(customer):
     while True:
         print("\n===== MENU =====")
-        print("1. View Food MENU")
+        print("1. View Menu")
         print("2. Place Order")
-        print("3. Logout")
-        print("4. Exit")
+        print("3. View My Orders")
+        print("4. Cancel Order")
+        print("5. View Bill")
+        print("6. Table Booking")
+        # print("7. Update Profile")
+        # print("7. Logout")
+        print("7. Exit")
 
         choice=input("Enter choice: ")
 
         if choice=="1":
-            view_food_menu()
+            customer.view_food_menu()
         elif choice=="2":
-            print("Place Order")
+            customer.place_order()
+            # print("Order placed successfully.")
         elif choice=="3":
-            print("Logout")
+            customer.view_orders()
         elif choice=="4":
-            print("Thank You!")
+            customer.cancel_order()
+        elif choice=="5":
+            customer.view_bill()
+        elif choice=="6":
+            customer.table_booking()
+        # elif choice=="6":
+        #     print("Update Profile")
+        # elif choice=="7":
+        #     print("Thank You!")
+            break
+        elif choice=="7":
+            print("Exiting...")
             break
 
         else:

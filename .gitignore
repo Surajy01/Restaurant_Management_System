@@ -1,0 +1,4 @@
+App/database/*.json
+__pycache__/
+*.pyc
+
