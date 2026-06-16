@@ -1,7 +1,7 @@
 import uuid
 from App.utils.file_handler import read_data, write_data
 
-FOOD_FILE="App/database/foods.json"
+FOOD_FILE="App/database/food.json"
 ORDER_FILE="App/database/orders.json"
 
 
@@ -100,7 +100,8 @@ class OrderService:
             "customer_name": customer_name,
             "items": cart,
             "grand_total": grand_total,
-            "status": "Pending"
+            "status": "Pending",
+            "payment_status":"Unpaid"
         }
 
         orders.append(order)
@@ -126,6 +127,7 @@ class OrderService:
         print("-" * 50)
         print(f"Grand Total : ₹{grand_total}")
         print(f"Status      : {order['status']}")
+        print(f"Payment Status : {order["payment_status"]}")
 
 
     def view_orders(self, customer_name):
@@ -147,6 +149,7 @@ class OrderService:
             print(f"\nOrder ID      : {order['order_id']}")
             print(f"Customer Name : {order['customer_name']}")
             print(f"Order Status  : {order['status']}")
+            print(f"Payment Status : {order["payment_status"]}")
 
             print("-" * 60)
             print(

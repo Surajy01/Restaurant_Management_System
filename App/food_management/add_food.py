@@ -2,7 +2,7 @@ import uuid
 from App.utils.file_handler import read_data, write_data
 from App.domain.food import Food
 
-FOOD_FILE="App/database/foods.json"
+FOOD_FILE="App/database/food.json"
 
 class AddFoodManager:
 
@@ -10,16 +10,22 @@ class AddFoodManager:
         print("\n===== FOOD MENU CATEGORY =====")
         print("1. Starters")
         print("2. Breakfast")
-        print("3. Lunch")
-        print("4. Dinner")
+        print("3. Main Course")
+        print("4. Desserts")
+        print("5. Beverages")
+        # print("3. Lunch")
+        # print("4. Dinner")
 
         choice=input("Select Category: ")
 
         categories={
             "1": "Starters",
             "2": "Breakfast",
-            "3": "Lunch",
-            "4": "Dinner"
+            "3": "Main Course",
+            "4": "Desserts",
+            "5": "Beverages",
+            # "3": "Lunch",
+            # "4": "Dinner"
         }
 
         if choice not in categories:

@@ -1,7 +1,7 @@
 import json
 import os
 
-# FILE_PATH = "App/database/foods.json"
+# FILE_PATH = "App/database/food.json"
 
 def read_data(FILE_PATH):
     if not os.path.exists(FILE_PATH):

@@ -1,5 +1,3 @@
-# from App.food_menu.view_food import view_food_menu
-# from App.customer.order_place import place_order
 
 def customer_menu(customer):
     while True:
@@ -8,7 +6,7 @@ def customer_menu(customer):
         print("2. Place Order")
         print("3. View My Orders")
         print("4. Cancel Order")
-        print("5. View Bill")
+        print("5. Pay Bill")
         print("6. Table Booking")
         # print("7. Update Profile")
         # print("7. Logout")
@@ -25,8 +23,11 @@ def customer_menu(customer):
             customer.view_orders()
         elif choice=="4":
             customer.cancel_order()
+
         elif choice=="5":
-            customer.view_bill()
+            order_id=input("Enter Order ID: ")
+            customer.Pay_bill(order_id)
+
         elif choice=="6":
             customer.table_booking()
         # elif choice=="6":
