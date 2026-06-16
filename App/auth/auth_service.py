@@ -1,7 +1,7 @@
 import uuid
 from App.utils.file_handler import read_data, write_data
 
-FILE_PATH = "App/database/signup.json"
+FILE_PATH = "App/database/sign_up.json"
 
 class AuthService:
 
@@ -15,8 +15,13 @@ class AuthService:
         dob=input("Enter date of birth (DD-MM-YYYY): ")
         address=input("Enter address: ")
         role=input("Enter role (admin/staff/customer): ")
-        department=input("Enter department: ")
-        experience=input("Enter experience (in years): ")
+        department=""
+        experience=""
+        if role == "staff":
+            department=input("Enter department: ")
+            experience=input("Enter experience (in years): ")
+        # department=input("Enter department: ")
+        # experience=input("Enter experience (in years): ")
 
         users=read_data(FILE_PATH)
 

@@ -1,6 +1,6 @@
 from App.utils.file_handler import read_data
 
-FOOD_FILE="App/database/foods.json"
+FOOD_FILE="App/database/food.json"
 
 class ViewFoodManager:
 
@@ -8,7 +8,7 @@ class ViewFoodManager:
 
         foods=read_data(FOOD_FILE)
 
-        categories=["Starters", "Breakfast", "Lunch", "Dinner"]
+        categories=["Starters", "Breakfast", "Main Course", "Desserts", "Beverages"]
         for category in categories:
             print("\n" + f" {category.upper()} MENU ".center(60, "="))
             print()

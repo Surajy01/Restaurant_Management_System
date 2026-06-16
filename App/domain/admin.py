@@ -3,6 +3,8 @@ from App.food_management.view_food import ViewFoodManager
 from App.food_management.add_food import AddFoodManager
 from App.food_management.update_food import UpdateFoodManager
 from App.food_management.dalate_food import DeleteFoodManager
+from App.services.view_all_orders import ViewAllOrdersServices
+from App.services.update_order_status import UpdateOrderStatusServices
 
 class Admin(User):
 
@@ -19,10 +21,12 @@ class Admin(User):
         DeleteFoodManager().delete_food()
 
     def view_all_orders(self):
-        print("Displaying all orders.")
+        ViewAllOrdersServices().view_all_orders()
+        # print("Displaying all orders.")
     
     def update_order_status(self):
-        print("Order status updated successfully.")
+        UpdateOrderStatusServices().update_order_status()
+        # print("Order status updated successfully.")
 
     def view_staff(self):
         print("Displaying staff members.")

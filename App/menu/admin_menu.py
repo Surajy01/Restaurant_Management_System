@@ -1,7 +1,3 @@
-# from App.food_menu.add_food import add_food
-# from App.food_menu.view_food import view_food_menu
-# from App.food_menu.update_food import update_food
-# from App.food_menu.delete_food import delete_food
 
 def admin_menu(admin):
     while True:

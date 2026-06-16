@@ -1,6 +1,6 @@
 from App.utils.file_handler import read_data, write_data
 
-FOOD_FILE="App/database/foods.json"
+FOOD_FILE="App/database/food.json"
 
 class DeleteFoodManager:
 
