@@ -4,10 +4,6 @@ ORDER_FILE="App/database/orders.json"
 
 class UpdateOrderStatusServices:
 
-    # def update_order_status(self, order_id, new_status):
-    #     # Logic to update the order status in the database
-    #     print(f"Order ID: {order_id} has been updated to status: {new_status}")
-
     def update_order_status(self):
 
         orders=read_data(ORDER_FILE)

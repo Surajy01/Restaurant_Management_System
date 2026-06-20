@@ -31,11 +31,20 @@ class AddFoodManager:
         if choice not in categories:
             print("Invalid Choice!")
             return
+        
+        while True:
+            food_type=input("Enter Food Type (Veg/Non-Veg): ").strip()
+
+            if food_type in ["Veg", "Non-Veg"]:
+                break
+
+            print("Invalid food type. Enter Veg or Non-Veg.")
 
         food=Food(
             id=str(uuid.uuid4().hex[:8]),
             category=categories[choice],
             name=input("Enter Food Name: "),
+            food_type=food_type,
             unit=input("Enter Unit (Full Plate/Half Plate/Piece/Bowl/Ml): "),
             stock=int(input("Enter Available Stock: ")),
             price=float(input("Enter Price: "))

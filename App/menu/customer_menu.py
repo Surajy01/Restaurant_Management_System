@@ -16,11 +16,13 @@ def customer_menu(customer):
 
         if choice=="1":
             customer.view_food_menu()
+
         elif choice=="2":
             customer.place_order()
-            # print("Order placed successfully.")
+
         elif choice=="3":
             customer.view_orders()
+
         elif choice=="4":
             customer.cancel_order()
 
@@ -30,11 +32,14 @@ def customer_menu(customer):
 
         elif choice=="6":
             customer.table_booking()
+
         # elif choice=="6":
         #     print("Update Profile")
+        
         # elif choice=="7":
         #     print("Thank You!")
-            break
+            # break
+            
         elif choice=="7":
             print("Exiting...")
             break

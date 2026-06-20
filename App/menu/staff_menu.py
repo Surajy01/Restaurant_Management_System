@@ -17,29 +17,34 @@ def staff_menu(staff):
 
         if choice=="1":
             staff.view_food_menu()
+
         elif choice=="2":
             staff.take_order()
-            # print("Take Order")
+
         elif choice=="3":
-            print("Table Reservation")
+            staff.table_reservation()
 
         elif choice=="4":
             order_id=input("Enter Order ID: ")
             staff.payment_menus(order_id)
-            # print("Generate Bill")
 
         elif choice=="5":
             staff.view_orders()
+
         elif choice=="6":
             staff.update_order_status()
+
         elif choice=="7":
             staff.view_available_foods()
+
         # elif choice=="8":
         #     print("Update Profile")
         #     break
+        
         # elif choice=="9":
         #     print("Thank You!")
-            break
+            # break
+
         elif choice=="8":
             print("Exiting...")
             break
