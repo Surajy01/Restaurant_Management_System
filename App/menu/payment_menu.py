@@ -1,7 +1,3 @@
-# from App.payment.cash_payment import CashPayment
-# from App.payment.upi_payment import UPIPayment
-# from App.payment.card_payment import CardPayment
-
 from App.domain.payment import CashPayment,UPIPayment,CardPayment
 from App.services.payment_services import PaymentService
 
@@ -46,6 +42,7 @@ def payment_menu(order_id):
         elif choice=="4":
             print("Back to Main Menu")
             break
+
         elif choice=="5":
             print("Exiting...")
             break

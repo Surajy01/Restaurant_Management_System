@@ -9,31 +9,78 @@ class ViewFoodManager:
         foods=read_data(FOOD_FILE)
 
         categories=["Starters", "Breakfast", "Main Course", "Desserts", "Beverages"]
+
+        print("\n" + "═" * 66)
+        print("🍽 RESTAURANT FOOD MENU 🍽".center(66))
+        print("═" * 66)
+
         for category in categories:
-            print("\n" + f" {category.upper()} MENU ".center(60, "="))
-            print()
-            print("-" * 60)
-            print(f"{'Food Name':<20}{'Unit':<15}{'Stock':<15}{'Price'}")
-            print("-" * 60)
-            found=False
 
-            for food in foods:
-                if food["category"]==category:
-                    print(f"{food['name']:<20}{food['unit']:<15}{food['stock']:<15}₹{food['price']}")
-                    found=True
+            print("\n")
+            print(f" {category.upper()} ".center(66, "═"))
 
-            if not found:
-                print("No Items Found")
-            print("-" * 60)
+            # Categories that should be separated into Veg and Non-Veg
+            if category in ["Starters", "Breakfast", "Main Course"]:
 
-        # if not foods:
-        #     print("No food items available!")
-        #     return
-        # for food in foods:
-        #     print(f"ID: {food['id']}")
-        #     print(f"Name: {food['name']}")
-        #     print(f"Category: {food['category']}")
-        #     print(f"Unit: {food['unit']}")
-        #     print(f"Stock: {food['stock']}")
-        #     print(f"Price: ${food['price']:.2f}")
-        #     print("-"*20)
+                for food_type in ["Veg", "Non-Veg"]:
+
+                    print(f"\n{'🟢' if food_type=='Veg' else '🔴'} {food_type.upper()} ITEMS".center(66))
+
+                    print("╔══════════════════════╦══════════════╦════════════╦════════════╗")
+                    print("║ Food Name            ║ Unit         ║ Stock      ║ Price      ║")
+                    print("╠══════════════════════╬══════════════╬════════════╬════════════╣")
+
+                    found=False
+
+                    for food in foods:
+
+                        if (
+                            food["category"]==category
+                            and food.get("food_type")==food_type
+                        ):
+
+                            stock=str(food["stock"]) if food["stock"] > 0 else "Out"
+
+                            print(
+                                f"║ {food['name'][:20]:<20} "
+                                f"║ {food['unit'][:12]:<12} "
+                                f"║ {stock:<10} "
+                                f"║ ₹{food['price']:<10}║"
+                            )
+
+                            found=True
+
+                    if not found:
+                        print("║{:^66}║".format("No Items Found"))
+
+                    print("╚══════════════════════╩══════════════╩════════════╩════════════╝")
+
+            else:
+                # Desserts and Beverages
+                print("╔══════════════════════╦══════════════╦════════════╦════════════╗")
+                print("║ Food Name            ║ Unit         ║ Stock      ║ Price      ║")
+                print("╠══════════════════════╬══════════════╬════════════╬════════════╣")
+
+                found=False
+
+                for food in foods:
+
+                    if food["category"]==category:
+
+                        stock=str(food["stock"]) if food["stock"] > 0 else "Out"
+
+                        print(
+                            f"║ {food['name'][:20]:<20} "
+                            f"║ {food['unit'][:12]:<12} "
+                            f"║ {stock:<10} "
+                            f"║ ₹{food['price']:<10}║"
+                        )
+
+                        found=True
+
+                if not found:
+                    print("║{:^66}║".format("No Items Found"))
+
+                print("╚══════════════════════╩══════════════╩════════════╩════════════╝")
+
+        print("\n" + "═" * 66)

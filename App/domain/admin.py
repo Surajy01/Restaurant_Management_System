@@ -22,11 +22,9 @@ class Admin(User):
 
     def view_all_orders(self):
         ViewAllOrdersServices().view_all_orders()
-        # print("Displaying all orders.")
     
     def update_order_status(self):
         UpdateOrderStatusServices().update_order_status()
-        # print("Order status updated successfully.")
 
     def view_staff(self):
         print("Displaying staff members.")

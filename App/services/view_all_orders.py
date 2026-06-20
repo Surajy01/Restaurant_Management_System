@@ -6,12 +6,6 @@ class ViewAllOrdersServices:
     
     # def __init__(self):
     #     pass
-
-    # def admin_login(self, username, password):
-    #     if username == "admin" and password == "admin123":
-    #         return True
-    #     else:
-    #         return False
     
     def view_all_orders(self):
 
