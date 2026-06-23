@@ -1,8 +1,8 @@
 import uuid
-from App.utils.file_handler import read_data,write_data
+from app.utils.file_handler import read_data,write_data
 
-TABLE_FILE="App/database/tables.json"
-BOOKING_FILE="App/database/table_bookings.json"
+TABLE_FILE="app/database/tables.json"
+BOOKING_FILE="app/database/table_bookings.json"
 
 class TableService:
 
@@ -17,7 +17,7 @@ class TableService:
             print("Invalid Number!")
             return
 
-        booking_date=input("Enter Booking Date (YYYY-MM-DD): ")
+        booking_date=input("Enter Booking Date (DD-MM-YYYY): ")
         booking_time=input("Enter Booking Time (HH:MM AM/PM): ")
 
         available_tables=[]
@@ -30,11 +30,13 @@ class TableService:
 
                 for booking in bookings:
 
+                    ACTIVE_BOOKINGS = ["Reserved", "Occupied"]
+
                     if (
                         booking["table_no"]==table["table_no"]
                         and booking["booking_date"]==booking_date
                         and booking["booking_time"]==booking_time
-                        and booking["status"] != "Cancelled"
+                        and booking["booking_status"] in ACTIVE_BOOKINGS
                     ):
                         booked=True
                         break
@@ -69,7 +71,7 @@ class TableService:
             "persons": persons,
             "booking_date": booking_date,
             "booking_time": booking_time,
-            "status": "Reserved"
+            "booking_status": "Reserved"
         }
 
         bookings.append(booking)
@@ -80,7 +82,9 @@ class TableService:
         print(f"Booking ID : {booking['booking_id']}")
         print(f"Customer   : {booking['customer_name']}")
         print(f"Table No   : {booking['table_no']}")
-        print(f"Status     : {booking['status']}")
+        print(f"Date       : {booking['booking_date']}")
+        print(f"Time       : {booking['booking_time']}")
+        print(f"Status     : {booking['booking_status']}")
 
     def view_my_bookings(self, customer_name):
 
@@ -106,7 +110,7 @@ class TableService:
             print(f"Persons    : {booking['persons']}")
             print(f"Date       : {booking['booking_date']}")
             print(f"Time       : {booking['booking_time']}")
-            print(f"Status     : {booking['status']}")
+            print(f"Status     : {booking['booking_status']}")
 
     def view_all_bookings(self):
 
@@ -126,7 +130,7 @@ class TableService:
                 f"Table {booking['table_no']} | "
                 f"{booking['booking_date']} | "
                 f"{booking['booking_time']} | "
-                f"{booking['status']}"
+                f"{booking['booking_status']}"
             )
 
     def update_booking_status(self):
@@ -155,7 +159,7 @@ class TableService:
 
                 if choice in status_map:
 
-                    booking["status"]=status_map[choice]
+                    booking["booking_status"]=status_map[choice]
 
                     write_data(BOOKING_FILE, bookings)
 
@@ -180,11 +184,11 @@ class TableService:
                 and booking["customer_name"]==customer_name
             ):
 
-                if booking["status"]=="Cancelled":
+                if booking["booking_status"]=="Cancelled":
                     print("Booking Already Cancelled!")
                     return
 
-                booking["status"]="Cancelled"
+                booking["booking_status"]="Cancelled"
 
                 write_data(BOOKING_FILE, bookings)
 

@@ -1,5 +1,5 @@
-from App.domain.payment import CashPayment,UPIPayment,CardPayment
-from App.services.payment_services import PaymentService
+from app.domain.payment import CashPayment,UPIPayment,CardPayment
+from app.services.payment_services import PaymentService
 
 def payment_menu(order_id):
 
@@ -11,21 +11,28 @@ def payment_menu(order_id):
         return
 
     user_name=order["customer_name"]
-    amount=order["grand_total"]
+    amount=order["final_total"]
 
     while True:
-        print("\n===== BILL PAYMENT =====")
-        print(f"Order ID : {order_id}")
-        print(f"Customer : {user_name}")
-        print(f"Amount   : ₹{amount}")
 
-        print("1. Cash Payment")
-        print("2. UPI Payment")
-        print("3. Debit/Credit Card Payment")
-        print("4. Back to Main Menu")
-        print("5. Exit")
+        print("\n" + "═" * 60)
+        print("💳  BILL PAYMENT GATEWAY  💳".center(60))
+        print("═" * 60)
 
-        choice=input("Enter choice: ")
+        print(f"🧾 Order ID  : {order_id}")
+        print(f"👤 Customer  : {user_name}")
+        print(f"💰 Amount    : ₹{amount}")
+
+        print("─" * 60)
+
+        print("1️⃣  Cash Payment")
+        print("2️⃣  UPI Payment (PhonePe / GPay / Paytm)")
+        print("3️⃣  Card Payment (Debit / Credit)")
+        print("4️⃣  🔙 Back ")
+
+        print("─" * 60)
+
+        choice = input("👉 Enter your choice: ")
 
         if choice=="1":
             CashPayment(user_name,order_id,amount).process_payment()
@@ -40,9 +47,5 @@ def payment_menu(order_id):
             break
 
         elif choice=="4":
-            print("Back to Main Menu")
-            break
-
-        elif choice=="5":
             print("Exiting...")
             break

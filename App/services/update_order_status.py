@@ -1,6 +1,6 @@
-from App.utils.file_handler import read_data, write_data
+from app.utils.file_handler import read_data, write_data
 
-ORDER_FILE="App/database/orders.json"
+ORDER_FILE="app/database/orders.json"
 
 class UpdateOrderStatusServices:
 

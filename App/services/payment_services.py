@@ -1,7 +1,7 @@
-from App.utils.file_handler import read_data,write_data
+from app.utils.file_handler import read_data,write_data
 
-PAYMENT_FILE="App/database/payments.json"
-ORDER_FILE="App/database/orders.json"
+PAYMENT_FILE="app/database/payments.json"
+ORDER_FILE="app/database/orders.json"
 
 class PaymentService:
     # def __init__(self, amount):

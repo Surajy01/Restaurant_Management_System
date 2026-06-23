@@ -1,21 +1,26 @@
-from App.menu.admin_menu import admin_menu
-from App.menu.customer_menu import customer_menu
-from App.menu.staff_menu import staff_menu
-from App.auth.auth_service import AuthService
-from App.domain.customer import Customer
-from App.domain.admin import Admin
-from App.domain.staff import Staff
+from app.menu.admin_menu import admin_menu
+from app.menu.customer_menu import customer_menu
+from app.menu.staff_menu import staff_menu
+from app.auth.auth_service import AuthService
+from app.domain.customer import Customer
+from app.domain.admin import Admin
+from app.domain.staff import Staff
 
 def auth_menu():
     auth_service=AuthService()
 
     while True:
-        print("\n===== RESTAURANT MANAGEMENT SYSTEM =====")
-        print("1. Sign Up")
-        print("2. Sign In")
-        print("3. Exit")
+        print("\n┌────────────────────────────────────────────┐")
+        print("│      🍽️  RESTAURANT MANAGEMENT SYSTEM  🍽️    │")
+        print("├────────────────────────────────────────────┤")
+        print("│       🔐  REGISTRATION & LOGIN MENU        │")
+        print("├────────────────────────────────────────────┤")
+        print("│  [1] 📝 Sign Up                            │")
+        print("│  [2] 🔑 Sign In                            │")
+        print("│  [3] 🚪 Exit                               │")
+        print("└────────────────────────────────────────────┘")
 
-        choice=input("Enter Choice: ")
+        choice=input("👉 Enter Your Choice: ")
 
         if choice=="1":
             auth_service.sign_up()

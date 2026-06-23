@@ -1,4 +1,4 @@
-from App.services.table_services import TableService
+from app.services.table_services import TableService
 
 def table_menu(customer_name):
 
@@ -27,7 +27,7 @@ def table_menu(customer_name):
             TableService().cancel_booking(customer_name)
 
         elif choice=="4":
-            print("Returning to Previous Menu...")
+            print("Returning to Previous Dashboard")
             break
 
         else:

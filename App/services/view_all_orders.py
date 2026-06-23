@@ -1,53 +1,62 @@
-from App.utils.file_handler import read_data, write_data
+from app.utils.file_handler import read_data, write_data
 
-ORDER_FILE = "App/database/orders.json"
+ORDER_FILE = "app/database/orders.json"
 
 class ViewAllOrdersServices:
     
     # def __init__(self):
     #     pass
-    
+
+
     def view_all_orders(self):
 
         orders=read_data(ORDER_FILE)
 
         if not orders:
-            print("No Orders Found!")
+            print("\n❌ No Orders Found!")
             return
 
-        print("\n" + "=" * 60)
-        print("                 ALL ORDER DETAILS")
-        print("=" * 60)
+        print("\n" + "═" * 65)
+        print("📋 ALL ORDERS REPORT 📋".center(65))
+        print("═" * 65)
 
         for order in orders:
 
-            print(f"\nOrder ID    : {order['order_id']}")
-            print(f"Customer Name : {order['customer_name']}")
-            print(f"Order Status  : {order['status']}")
+            print("\n┌" + "─" * 39 + "┐")
+            print(f"│ 🆔 Order ID       : {order['order_id']:<18}│")
+            print(f"│ 👤 Customer       : {order['customer_name']:<18}│")
+            print(f"│ 📞 Phone          : {order.get('customer_phone', 'N/A'):<18}│")
+            print(f"│ 🛒 Ordered By     : {order.get('ordered_by', 'Customer'):<18}│")
 
-            print("-" * 60)
-            print(
-                f"{'Food Item':<20}"
-                f"{'Qty':<8}"
-                f"{'Unit':<15}"
-                f"{'Price':<10}"
-                f"{'Total'}"
-            )
-            print("-" * 60)
+            if order.get("staff_name"):
+                print(f"│ 👨‍🍳 Staff Name     : {order['staff_name']:<16}│")
 
-            for item in order["items"]:
+            print(f"│ 📦 Order Status   : {order['status']:<18}│")
+            print(f"│ 💳 Payment Status : {order['payment_status']:<18}│")
+            print(f"│ 💰 Final Amount   : ₹{str(order['final_total']):<17}│")
+            print("└" + "─" * 39 + "┘")
+
+            print("\n🍽  ORDER ITEMS")
+            print("┌────┬──────────────────────┬───────┬──────────┬──────────┐")
+            print("│ No │ Food Name            │ Qty   │ Price    │ Total    │")
+            print("├────┼──────────────────────┼───────┼──────────┼──────────┤")
+
+            for index, item in enumerate(order["items"], start=1):
 
                 print(
-                    f"{item['food_name']:<20}"
-                    f"{item['quantity']:<8}"
-                    f"{item['unit']:<15}"
-                    f"₹{item['price']:<9}"
-                    f"₹{item['total']}"
+                    f"│ {index:<2} "
+                    f"│ {item['food_name'][:20]:<20} "
+                    f"│ {item['quantity']:<5} "
+                    f"│ ₹{item['price']:<7} "
+                    f"│ ₹{item['total']:<7} │"
                 )
 
-            print("-" * 60)
-            print(f"{'Grand Total':<52} ₹{order['grand_total']}")
-            print("=" * 60)
+            print("└────┴──────────────────────┴───────┴──────────┴──────────┘")
+
+            print(f"🧾 Grand Total : ₹{order['final_total']}")
+            print("")
+            print("*" * 65)
+
     
     # def update_order_status(self, order_id, new_status):
 

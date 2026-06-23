@@ -1,49 +1,69 @@
 import uuid
-from App.utils.file_handler import read_data, write_data
+from app.utils.file_handler import read_data, write_data
 from datetime import datetime
+from app.menu.payment_menu import payment_menu
 
-FOOD_FILE="App/database/food.json"
-ORDER_FILE="App/database/orders.json"
+FOOD_FILE="app/database/food.json"
+ORDER_FILE="app/database/orders.json"
+# USER_FILE="app/database/sign_up.json"
 
 
 class OrderService:
 
-    def order_food(self, customer_name):
+    def order_food(self, customer_name, customer_phone, ordered_by, staff_name=None):
 
         foods=read_data(FOOD_FILE)
 
         if not foods:
             print("No food items available!")
             return
+        
+        # Sort foods by category
+        category_order={
+            "Breakfast": 1,
+            "Starters": 2,
+            "Main Course": 3,
+            "Beverages": 4,
+            "Desserts": 5
+        }
+
+        foods.sort(
+            key=lambda food: category_order.get(
+                food["category"],
+                999
+            )
+        )
 
         cart=[]
         grand_total=0
 
         while True:
 
-            print("\n" + "═" * 70)
-            print("🍽 FOOD MENU 🍽".center(70))
-            print("═" * 70)
+            print("\n" + "═" * 90)
+            print("🍽 FOOD MENU 🍽".center(90))
+            print("═" * 90)
 
-            print("╔════╦══════════════════╦════════════╦═════════╦══════════╦═══════╗")
-            print("║ No ║ Food Name        ║ Category   ║ Unit    ║ Price    ║ Stock ║")
-            print("╠════╬══════════════════╬════════════╬═════════╬══════════╬═══════╣")
+            print("╔════╦══════════════════╦══════════════╦═════════╦═════════╦══════════╦═══════╗")
+            print("║ No ║ Food Name        ║ Category     ║ Type    ║ Unit    ║ Price    ║ Stock ║")
+            print("╠════╬══════════════════╬══════════════╬═════════╬═════════╬══════════╬═══════╣")
 
             for index, food in enumerate(foods, start=1):
 
-                status="✓" if food["stock"] > 0 else "✗"
+                status = "✓" if food["stock"] > 0 else "✗"
+
+                food_type = food.get("food_type", "Veg")
 
                 print(
                     f"║ {index:<2} "
                     f"║ {food['name'][:16]:<16} "
-                    f"║ {food['category'][:10]:<10} "
+                    f"║ {food['category'][:12]:<12} "
+                    f"║ {food_type[:7]:<7} "
                     f"║ {food['unit'][:7]:<7} "
                     f"║ ₹{food['price']:<7} "
                     f"║ {status:^5} ║"
                 )
 
-            print("╚════╩══════════════════╩════════════╩═════════╩══════════╩═══════╝")
-
+            print("╚════╩══════════════════╩══════════════╩═════════╩═════════╩══════════╩═══════╝")
             # try:
                 # choice=int(input("\nSelect Food Number: "))
                 # food=foods[choice - 1]
@@ -144,12 +164,23 @@ class OrderService:
         # Read existing orders
         orders=read_data(ORDER_FILE)
 
+        invoice_date=datetime.now().strftime("%d-%m-%Y")
+        invoice_time=datetime.now().strftime("%I:%M %p")
+        gst_rate=5  # 5%
+        gst_amount=(grand_total * gst_rate) / 100
+        final_total=grand_total + gst_amount
         # Create order
         order={
             "order_id": str(uuid.uuid4())[:8],
             "customer_name": customer_name,
+            "customer_phone": customer_phone,
+            "ordered_by": ordered_by,
+            "order_date": datetime.now().strftime("%d-%m-%Y"),
+            "order_time": datetime.now().strftime("%I:%M %p"),
+            "staff_name": staff_name,
             "items": cart,
             "grand_total": grand_total,
+            "final_total": final_total,
             "status": "Pending",
             "payment_status":"Unpaid"
         }
@@ -157,10 +188,13 @@ class OrderService:
         orders.append(order)
 
         write_data(ORDER_FILE, orders)
-        invoice_date=datetime.now().strftime("%d-%m-%Y %I:%M %p")
-        gst_rate=5  # 5%
-        gst_amount=(grand_total * gst_rate) / 100
-        final_total=grand_total + gst_amount
+
+        # users=read_data(USER_FILE)
+
+        # for user in users:
+        #     if user["username"]==customer_name:
+        #         customer_phone=user["phone"]
+        #         break 
 
         print("\n" + "=" * 80)
         print("🧾 SURAJ RESTAURANT INVOICE 🧾".center(80))
@@ -168,9 +202,16 @@ class OrderService:
 
         print(f"Order ID        : {order['order_id']}")
         print(f"Customer Name   : {customer_name}")
-        # print(f"Phone Number    : {phone}")
-        print(f"Phone Number    : 1234567890")
-        print(f"Date & Time     : {invoice_date}")
+        print(f"Phone Number    : {customer_phone}")
+
+        if ordered_by == "Staff":
+            print(f"Ordered By      : {ordered_by}")
+
+        if ordered_by == "Staff":
+            print(f"Staff Name      : {staff_name}")
+
+        print(f"Date     : {invoice_date}")
+        print(f"Time     : {invoice_time}")
         print(f"Order Status    : {order['status']}")
         print(f"Payment Status  : {order['payment_status']}")
 
@@ -204,31 +245,22 @@ class OrderService:
         print("🙏 Thank You For Visiting Suraj Restaurant 🙏".center(80))
         print("=" * 80)
 
+        if ordered_by=="Customer":
 
+            pay_now=input("\nDo you want to pay the bill now? (y/n): ").lower()
 
-        # print("\n===== ORDER SUCCESSFUL =====")
-        # print(f"Order ID : {order['order_id']}")
-        # print(f"Customer : {customer_name}")
+            # if pay_now == "y":
+            #     PaymentService().pay_bill(
+            #         order["order_id"],
+            #         final_total
+            #     )
 
-        # print("\nItems Ordered:")
-        # print()
+            if pay_now == "y":
+                payment_menu(order["order_id"])
+            else:
+                print("💳 Payment Pending!")
 
-        # for item in cart:
-
-        #     print(
-        #         f"{item['food_name']} | "
-        #         f"{item['quantity']} {item['unit']} | "
-        #         f"₹{item['price']} each | "
-        #         f"₹{item['total']}"
-        #     )
-
-        # print("-" * 50)
-        # print(f"Grand Total : ₹{grand_total}")
-        # print(f"Status      : {order['status']}")
-        # print(f"Payment Status : {order['payment_status']}")
-
-
-    def view_orders(self, customer_name):
+    def view_orders_history(self, customer_name):
 
         orders=read_data(ORDER_FILE)
 
@@ -238,38 +270,50 @@ class OrderService:
             print("You have no orders yet!")
             return
 
-        print("\n" + "=" * 60)
-        print("                 YOUR ORDER DETAILS")
-        print("=" * 60)
+        print("\n" + "═" * 60)
+        print("🧾 MY ORDER HISTORY 🧾".center(60))
+        print("═" * 60)
 
         for order in customer_orders:
 
-            print(f"\nOrder ID      : {order['order_id']}")
-            print(f"Customer Name : {order['customer_name']}")
-            print(f"Order Status  : {order['status']}")
-            print(f"Payment Status : {order['payment_status']}")
+            print("\n╔" + "═" * 50 + "╗")
+            print("║            📋 ORDER DETAILS                ║".center(50))
+            print("╠" + "═" * 50 + "╣")
 
-            print("-" * 60)
-            print(
-                f"{'Food Item':<20}"
-                f"{'Qty':<8}"
-                f"{'Unit':<15}"
-                f"{'Price':<10}"
-                f"{'Total'}"
-            )
-            print("-" * 60)
+            print(f"║ 🆔 Order ID       : {order['order_id']:<30}║")
+            print(f"║ 👤 Name  : {order['customer_name']:<30}║")
+            print(f"║ 📦 Order Status   : {order['status']:<30}║")
+            print(f"║ 💳 Payment Status : {order['payment_status']:<30}║")
 
-            for item in order["items"]:
+            if "payment_method" in order:
+                print(f"║ 💰 Payment Method : {order['payment_method']:<30}║")
+
+            if "order_date" in order:
+                print(f"║ 📅 Order Date     : {order['order_date']:<30}║")
+
+            if "order_time" in order:
+                print(f"║ 📅 Order Time     : {order['order_time']:<30}║")
+
+            print("╚" + "═" * 50 + "╝")
+
+            print("\n🍽 ORDER ITEMS")
+            print("┌────┬──────────────────────┬────────┬──────────┬──────────┐")
+            print("│ No │ Food Name            │ Qty    │ Price    │ Total    │")
+            print("├────┼──────────────────────┼────────┼──────────┼──────────┤")
+
+            for index, item in enumerate(order["items"], start=1):
 
                 print(
-                    f"{item['food_name']:<20}"
-                    f"{item['quantity']:<8}"
-                    f"{item['unit']:<15}"
-                    f"₹{item['price']:<9}"
-                    f"₹{item['total']}"
+                    f"│ {index:<2} "
+                    f"│ {item['food_name'][:20]:<20} "
+                    f"│ {item['quantity']:<6} "
+                    f"│ ₹{item['price']:<7} "
+                    f"│ ₹{item['total']:<7} │"
                 )
 
-            print("-" * 60)
-            print(f"{'Grand Total':<52} ₹{order['grand_total']}")
-            print("=" * 60)
+            print("└────┴──────────────────────┴────────┴──────────┴──────────┘")
+
+            print(f"\n🧾 Grand Total : ₹{order['final_total']}")
+            print("")
+            print("*" * 60)
 
