@@ -1,12 +1,12 @@
 import uuid
-from App.utils.file_handler import read_data, write_data
+from app.utils.file_handler import read_data, write_data
 from getpass import getpass
 import re
 from datetime import datetime
-from App.domain.user import User
+from app.domain.user import User
 # import hashlib
 
-FILE_PATH="App/database/sign_up.json"
+FILE_PATH="app/database/sign_up.json"
 
 class AuthService:
 
@@ -14,7 +14,7 @@ class AuthService:
 
         users=read_data(FILE_PATH)
 
-        print("\n===== SIGN UP =====")
+        print("\n===== 📝 SIGN UP =====")
 
         user_id=str(uuid.uuid4().hex[:8])
         username=input("Enter username: ").strip()
@@ -145,7 +145,7 @@ class AuthService:
 
     def sign_in(self):
 
-        print("\n===== SIGN IN =====")
+        print("\n===== 🔑 SIGN IN =====")
 
         email=input("Enter email: ").strip()
         password=getpass("Enter password: ")

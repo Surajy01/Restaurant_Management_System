@@ -1,6 +1,6 @@
-from App.utils.file_handler import read_data
+from app.utils.file_handler import read_data
 
-FOOD_FILE="App/database/food.json"
+FOOD_FILE="app/database/food.json"
 
 class ViewFoodManager:
 

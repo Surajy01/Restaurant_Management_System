@@ -1,19 +1,19 @@
 
 def staff_menu(staff):
     while True:
-        print("\n===== MENU =====")
-        print("1. View MENU")
-        print("2. Take Order")
-        print("3. Table Reservation")
-        print("4. Generate Bill")
-        print("5. View All Orders")
-        print("6. Update Order Status")
-        print("7. View Available Foods")
-        # print("8. Update Profile")
-        # print("9. Logout")
-        print("8. Exit")
+        print("\n┌────────────────────────────────────────┐")
+        print("│        👨‍🍳 STAFF DASHBOARD 👨‍🍳       │")
+        print("├────────────────────────────────────────┤")
+        print("│ [1] 📋 View Menu                       │")
+        print("│ [2] 🛒 Take Order                      │")
+        print("│ [3] 🪑 Table Reservation               │")
+        print("│ [4] 🧾 Generate Bill                   │")
+        print("│ [5] 📦 Manage Orders                   │")
+        # print("│ [6] 🍽️ View Available Foods          │")
+        print("│ [6] 🚪 Exit/Logout                     │")
+        print("└────────────────────────────────────────┘")
 
-        choice=input("Enter choice: ")
+        choice=input("👉 Enter your choice: ")
 
         if choice=="1":
             staff.view_food_menu()
@@ -29,13 +29,16 @@ def staff_menu(staff):
             staff.payment_menus(order_id)
 
         elif choice=="5":
-            staff.view_orders()
+            staff.order_management()
 
-        elif choice=="6":
-            staff.update_order_status()
+        # elif choice=="5":
+        #     staff.view_orders()
 
-        elif choice=="7":
-            staff.view_available_foods()
+        # elif choice=="6":
+        #     staff.update_order_status()
+
+        # elif choice=="7":
+        #     staff.view_available_foods()
 
         # elif choice=="8":
         #     print("Update Profile")
@@ -45,7 +48,7 @@ def staff_menu(staff):
         #     print("Thank You!")
             # break
 
-        elif choice=="8":
+        elif choice=="6":
             print("Exiting...")
             break
 

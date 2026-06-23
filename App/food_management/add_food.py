@@ -1,8 +1,8 @@
 import uuid
-from App.utils.file_handler import read_data, write_data
-from App.domain.food import Food
+from app.utils.file_handler import read_data, write_data
+from app.domain.food import Food
 
-FOOD_FILE="App/database/food.json"
+FOOD_FILE="app/database/food.json"
 
 class AddFoodManager:
 
