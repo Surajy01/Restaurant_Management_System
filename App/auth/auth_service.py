@@ -4,6 +4,9 @@ from getpass import getpass
 import re
 from datetime import datetime
 from app.domain.user import User
+from app.utils.logger import write_log
+import logging
+
 # import hashlib
 
 FILE_PATH="app/database/sign_up.json"
@@ -27,6 +30,7 @@ class AuthService:
             for user in users:
                 if user["email"].lower()==email.lower():
                     print("\nEmail already exists. Please use a different email.")
+                    logging.error(f"Signup failed - Email already exists: {email}")
                     return
 
             email_pattern=r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
@@ -35,6 +39,7 @@ class AuthService:
                 break
 
             print("Invalid email format. Please try again.")
+            logging.error(f"Invalid email format entered: {email}")
 
         # Phone Validation
         while True:
@@ -44,6 +49,7 @@ class AuthService:
                 break
 
             print("Phone number must contain exactly 10 digits.")
+            logging.error(f"Invalid phone number entered: {phone}")
 
         # Password Validation
         while True:
@@ -65,6 +71,7 @@ class AuthService:
                 "- 1 number\n"
                 "- 1 special character"
             )
+            logging.error(f"Signup failed -  Invalid Password Format")
 
         # Date of Birth Validation
         while True:
@@ -75,6 +82,7 @@ class AuthService:
                 break
             except ValueError:
                 print("Invalid date format. Please use DD-MM-YYYY.")
+                logging.error(f"Invalid DOB entered: {dob}")
 
         address=input("Enter address: ").strip()
 
@@ -86,6 +94,7 @@ class AuthService:
                 break
 
             print("Invalid role. Please enter admin, staff, or customer.")
+            logging.error(f"Invalid role entered: {role}")
 
         department=""
         experience=""
@@ -140,6 +149,7 @@ class AuthService:
         write_data(FILE_PATH, users)
 
         print("\nUser registered successfully!")
+        write_log(f"New user registered successfully - username: {username} | Role: {role} | Email: {email}")
 
 
 
@@ -156,8 +166,12 @@ class AuthService:
             if(user["email"].lower()==email.lower()and user["password"]==password):
                 print("\nSign in successful!")
                 print(f"Welcome {user['username']}, "f"Signed in as {user['role']}")
+                write_log(
+                    f"User signed in successfully - username: {user['username']} "
+                )                
                 return user
 
         print("\nInvalid email or password. Please try again.")
+        logging.error(f"Invalid email or password - Email: {email}")
         return None
     

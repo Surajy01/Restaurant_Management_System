@@ -1,7 +1,9 @@
 from app.services.view_all_orders import ViewAllOrdersServices
 from app.services.update_order_status import UpdateOrderStatusServices
+from app.order.cancel_order import CancelOrder
 
-def order_management():
+
+def order_management(user):
     while True:
         print("\n╔═════════════════════════════════════╗")
         print("║      📦 ORDER MANAGEMENT 📦         ║")
@@ -14,7 +16,7 @@ def order_management():
         print("║ 6. 🔙 Back                          ║")
         print("╚═════════════════════════════════════╝")
 
-        choice = input("👉 Enter your choice: ")
+        choice=input("👉 Enter your choice: ")
 
         if choice=="1":
             ViewAllOrdersServices().view_all_orders()
@@ -27,8 +29,13 @@ def order_management():
             UpdateOrderStatusServices().update_order_status()
 
         elif choice=="4":
-            print(" cancel Order by id")
-            # cancel_order()
+            order_id=input("Enter Order ID to Cancel: ").strip()
+
+            CancelOrder(
+                customer_name=user.username,
+                order_id=order_id,
+                role=user.role
+            ).execute()
 
         elif choice=="5":
             print(" Order reports")
@@ -40,3 +47,5 @@ def order_management():
 
         else:
             print("❌ Invalid choice! Please try again.")
+
+            

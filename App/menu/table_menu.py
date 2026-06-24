@@ -4,18 +4,20 @@ def table_menu(customer_name):
 
     while True:
 
-        print("\n" + "═" * 40)
-        print("🍽 TABLE RESERVATION MENU 🍽".center(40))
-        print("═" * 40)
+        print("\n" + "═" * 50)
+        print("🪑 TABLE RESERVATION MENU 🪑".center(50))
+        print("═" * 50)
 
-        print("1. Reserve Table")
-        print("2. View My Bookings")
-        print("3. Cancel Booking")
-        print("4. Back")
+        print("╔══════════════════════════════════════════╗")
+        print("║  1. 🪑 Reserve Table                     ║")
+        print("║  2. 📋 View My Bookings                  ║")
+        print("║  3. ❌ Cancel Booking                    ║")
+        print("║  4. 🔙 Back                              ║")
+        print("╚══════════════════════════════════════════╝")
 
-        print("═" * 40)
+        print("═" * 50)
 
-        choice=input("Enter Choice: ")
+        choice=input("\n👉 Select Choice: ")
 
         if choice=="1":
             TableService().reserve_table(customer_name)

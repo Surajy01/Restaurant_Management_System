@@ -7,7 +7,7 @@ def staff_menu(staff):
         print("│ [1] 📋 View Menu                       │")
         print("│ [2] 🛒 Take Order                      │")
         print("│ [3] 🪑 Table Reservation               │")
-        print("│ [4] 🧾 Generate Bill                   │")
+        print("│ [4] 🧾 Generate/Pay Bill               │")
         print("│ [5] 📦 Manage Orders                   │")
         # print("│ [6] 🍽️ View Available Foods          │")
         print("│ [6] 🚪 Exit/Logout                     │")
@@ -31,22 +31,9 @@ def staff_menu(staff):
         elif choice=="5":
             staff.order_management()
 
-        # elif choice=="5":
-        #     staff.view_orders()
-
-        # elif choice=="6":
-        #     staff.update_order_status()
-
-        # elif choice=="7":
-        #     staff.view_available_foods()
-
         # elif choice=="8":
         #     print("Update Profile")
         #     break
-        
-        # elif choice=="9":
-        #     print("Thank You!")
-            # break
 
         elif choice=="6":
             print("Exiting...")
