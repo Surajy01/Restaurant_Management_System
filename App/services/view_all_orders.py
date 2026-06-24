@@ -1,12 +1,11 @@
 from app.utils.file_handler import read_data, write_data
 
-ORDER_FILE = "app/database/orders.json"
+ORDER_FILE="app/database/orders.json"
 
 class ViewAllOrdersServices:
     
     # def __init__(self):
     #     pass
-
 
     def view_all_orders(self):
 
@@ -57,19 +56,6 @@ class ViewAllOrdersServices:
             print("")
             print("*" * 65)
 
-    
-    # def update_order_status(self, order_id, new_status):
-
-    #     orders=read_data(ORDER_FILE)
-
-    #     for order in orders:
-    #         if order['order_id']==order_id:
-    #             order['status']=new_status
-    #             write_data(ORDER_FILE, orders)
-    #             print(f"Order ID: {order_id} has been updated to status: {new_status}")
-    #             return
-        
-    #     print(f"Order ID: {order_id} not found.")
 
 
     

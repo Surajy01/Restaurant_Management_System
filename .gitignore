@@ -1,3 +1,16 @@
-app/database/*.json
+# Database
+# app/database/*.json
+app/database/sign_up.json
+app/database/orders.json
+app/database/table_bookings.json
+app/database/payments.json
+app/database/tables.json
+
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+
+# Logs
+logs/
+*.log

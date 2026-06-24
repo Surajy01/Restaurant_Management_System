@@ -76,3 +76,4 @@ def auth_menu():
 
         else:
             print("Invalid Choice!")
+            

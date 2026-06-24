@@ -20,7 +20,7 @@ class Customer(User):
 
     def cancel_order(self):
        self.order_id=input("Order ID: ")
-       CancelOrder(customer_name=self.username, order_id=self.order_id).execute()
+       CancelOrder(customer_name=self.username, order_id=self.order_id,role=self.role).execute()
 
     def Generate_bill(self):
         print("Displaying your bill.")
