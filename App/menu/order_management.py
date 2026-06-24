@@ -9,11 +9,11 @@ def order_management(user):
         print("║      📦 ORDER MANAGEMENT 📦         ║")
         print("╠═════════════════════════════════════╣")
         print("║ 1. 📋 View All Orders               ║")
-        print("║ 2. 🔍 Search Order                  ║")
+        print("║ 2. 🔍 Search Order(N/A)             ║")
         print("║ 3. 🔄 Update Order Status           ║")
         print("║ 4. ❌ Cancel Order                  ║")
-        print("║ 5. 📊 Order Reports                 ║")
-        print("║ 6. 🔙 Back                          ║")
+        # print("║ 5. 📊 Order Reports                 ║")
+        print("║ 5. 🔙 Back                          ║")
         print("╚═════════════════════════════════════╝")
 
         choice=input("👉 Enter your choice: ")
@@ -37,11 +37,11 @@ def order_management(user):
                 role=user.role
             ).execute()
 
-        elif choice=="5":
-            print(" Order reports")
+        # elif choice=="5":
+        #     print(" Order reports")
             # order_reports()
 
-        elif choice=="6":
+        elif choice=="5":
             print("🔙 Returning to Previous Dashboard")
             break
 

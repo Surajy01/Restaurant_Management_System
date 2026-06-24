@@ -7,7 +7,11 @@ def payment_menu(order_id):
     order=payment_service.get_order_by_id(order_id)
 
     if not order:
-        print("Order not found!")
+        print("❌ Order not found!")
+        return
+    
+    if order["payment_status"] == "Paid":
+        print("❌ This order has already been paid!")
         return
 
     user_name=order["customer_name"]

@@ -75,13 +75,23 @@ class OrderService:
 
                 try:
 
-                    user_input=input("\nSelect Food Number or Enter Food Name: ").strip()
+                    user_input=input("\nSelect Food Number / Name (or 0 to exit): ").strip()
+
+                    # ✅ EXIT OPTION
+                    if user_input == "0":
+                        print("Exiting Food Menu...")
+                        break
 
                     # Select by number
                     if user_input.isdigit():
 
                         choice=int(user_input)
-                        food=foods[choice - 1]
+
+                        if choice < 1 or choice > len(foods):
+                            print("Invalid Choice!")
+                            continue
+
+                        food = foods[choice - 1]
 
                     # Search by food name
                     else:
