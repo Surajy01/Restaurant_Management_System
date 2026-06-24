@@ -36,6 +36,60 @@
         "price": 99.0
     },
     {
+        "id": "3bb70f65",
+        "category": "Breakfast",
+        "name": "Aloo Paratha",
+        "food_type": "Veg",
+        "unit": "1 Piece",
+        "stock": 20,
+        "price": 99.0
+    },
+    {
+        "id": "a9ae154c",
+        "category": "Breakfast",
+        "name": "Paneer Paratha",
+        "food_type": "Veg",
+        "unit": "1 Piece",
+        "stock": 14,
+        "price": 120.0
+    },
+    {
+        "id": "a1b2c3d4",
+        "category": "Breakfast",
+        "name": "Upma",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 20,
+        "price": 60.0
+    },
+    {
+        "id": "f6g7h8j9",
+        "category": "Breakfast",
+        "name": "Puri Bhaji",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 16,
+        "price": 85.0
+    },
+    {
+        "id": "g7h8j9k1",
+        "category": "Breakfast",
+        "name": "Chole Bhature",
+        "food_type": "Veg",
+        "unit": "2 Piece",
+        "stock": 12,
+        "price": 120.0
+    },
+    {
+        "id": "k1l2m3n4",
+        "category": "Breakfast",
+        "name": "Bread Omelette",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 19,
+        "price": 75.0
+    },
+    {
         "id": "0652p98a",
         "category": "Starters",
         "name": "Crispy Corn",
@@ -72,6 +126,69 @@
         "price": 149.0
     },
     {
+        "id": "45720d24",
+        "category": "Starters",
+        "name": "Chicken Lollipop",
+        "food_type": "Non-Veg",
+        "unit": "5 Piece",
+        "stock": 16,
+        "price": 249.0
+    },
+    {
+        "id": "st01a2b3",
+        "category": "Starters",
+        "name": "Veg Manchurian",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 25,
+        "price": 160.0
+    },
+    {
+        "id": "st02b3c4",
+        "category": "Starters",
+        "name": "Chicken Wings",
+        "food_type": "Non-Veg",
+        "unit": "6 Piece",
+        "stock": 20,
+        "price": 220.0
+    },
+    {
+        "id": "st04d5e6",
+        "category": "Starters",
+        "name": "Veg Spring Roll",
+        "food_type": "Veg",
+        "unit": "2 Piece",
+        "stock": 30,
+        "price": 140.0
+    },
+    {
+        "id": "st05e6f7",
+        "category": "Starters",
+        "name": "Chicken Spring Roll",
+        "food_type": "Non-Veg",
+        "unit": "2 Piece",
+        "stock": 22,
+        "price": 180.0
+    },
+    {
+        "id": "st09j1k2",
+        "category": "Starters",
+        "name": "Mushroom Chilli",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 16,
+        "price": 170.0
+    },
+    {
+        "id": "st10k2l3",
+        "category": "Starters",
+        "name": "Fish Fingers",
+        "food_type": "Non-Veg",
+        "unit": "6 Piece",
+        "stock": 14,
+        "price": 260.0
+    },
+    {
         "category": "Main Course",
         "id": "9ed17e4a",
         "name": "Rice",
@@ -86,7 +203,7 @@
         "name": "Naan ",
         "food_type": "Veg",
         "unit": "1 Peice",
-        "stock": 10,
+        "stock": 8,
         "price": 40.0
     },
     {
@@ -153,6 +270,159 @@
         "price": 350.0
     },
     {
+        "id": "a9amc516",
+        "category": "Main Course",
+        "name": "Fish Curry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 14,
+        "price": 280.0
+    },
+    {
+        "id": "mc01a2b3",
+        "category": "Main Course",
+        "name": "Jeera Rice",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 20,
+        "price": 140.0
+    },
+    {
+        "id": "mc02b3c4",
+        "category": "Main Course",
+        "name": "Veg Pulao",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 18,
+        "price": 180.0
+    },
+    {
+        "id": "mc03c4d5",
+        "category": "Main Course",
+        "name": "Veg Fried Rice",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 16,
+        "price": 199.0
+    },
+    {
+        "id": "mc04d5e6",
+        "category": "Main Course",
+        "name": "Shahi Paneer",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 14,
+        "price": 220.0
+    },
+    {
+        "id": "mc05e6f7",
+        "category": "Main Course",
+        "name": "Malai Kofta",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 12,
+        "price": 240.0
+    },
+    {
+        "id": "mc06f7g8",
+        "category": "Main Course",
+        "name": "Chana Masala",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 22,
+        "price": 149.0
+    },
+    {
+        "id": "mc07g8h9",
+        "category": "Main Course",
+        "name": "Rajma",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 20,
+        "price": 199.0
+    },
+    {
+        "id": "mc11l3m4",
+        "category": "Main Course",
+        "name": "Dum Aloo",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 13,
+        "price": 160.0
+    },
+    {
+        "id": "mc14p6q7",
+        "category": "Main Course",
+        "name": "Chicken Curry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 16,
+        "price": 220.0
+    },
+    {
+        "id": "mc15q7r8",
+        "category": "Main Course",
+        "name": "Mutton Rogan Josh",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 10,
+        "price": 299.0
+    },
+    {
+        "id": "mc16r8s9",
+        "category": "Main Course",
+        "name": "Egg Curry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 18,
+        "price": 160.0
+    },
+    {
+        "id": "mc17s9t1",
+        "category": "Main Course",
+        "name": "Fish Curry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 14,
+        "price": 280.0
+    },
+    {
+        "id": "mc19u2v3",
+        "category": "Main Course",
+        "name": "Mutton Biryani",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 9,
+        "price": 300.0
+    },
+    {
+        "id": "mc20v3w4",
+        "category": "Main Course",
+        "name": "Chicken Do Pyaza",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 11,
+        "price": 270.0
+    },
+    {
+        "id": "ms03c4d5",
+        "category": "Main Course",
+        "name": "Mushroom Masala",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 15,
+        "price": 210.0
+    },
+    {
+        "id": "ms04d5e6",
+        "category": "Main Course",
+        "name": "Mushroom Matar Curry",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 15,
+        "price": 200.0
+    },
+    {
         "id": "h9i0j1k2",
         "category": "Beverages",
         "name": "Lassi",
@@ -175,203 +445,6 @@
         "unit": "300 Ml",
         "stock": 20,
         "price": 120.0
-    },
-    {
-        "id": "f1a2b3c4",
-        "category": "Desserts",
-        "name": "Gulab Jamun",
-        "unit": "2 Piece",
-        "stock": 23,
-        "price": 80.0
-    },
-    {
-        "id": "e5f6g7h8",
-        "category": "Desserts",
-        "name": "Rasmalai",
-        "unit": "2 Piece",
-        "stock": 17,
-        "price": 100.0
-    },
-    {
-        "id": "t1u2v3w4",
-        "category": "Desserts",
-        "name": "Ice Cream",
-        "unit": "1 Scoop",
-        "stock": 25,
-        "price": 60.0
-    },
-    {
-        "id": "45720d24",
-        "category": "Starters",
-        "name": "Chicken Lollipop",
-        "food_type": "Non-Veg",
-        "unit": "5 Piece",
-        "stock": 16,
-        "price": 249.0
-    },
-    {
-        "id": "3bb70f65",
-        "category": "Breakfast",
-        "name": "Aloo Paratha",
-        "food_type": "Veg",
-        "unit": "1 Piece",
-        "stock": 20,
-        "price": 99.0
-    },
-    {
-        "id": "a9ae154c",
-        "category": "Breakfast",
-        "name": "Paneer Paratha",
-        "food_type": "Veg",
-        "unit": "1 Piece",
-        "stock": 15,
-        "price": 120.0
-    },
-    {
-        "id": "a9amc516",
-        "category": "Main Course",
-        "name": "Fish Curry",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 14,
-        "price": 280.0
-    },{
-        "id": "a1b2c3d4",
-        "category": "Breakfast",
-        "name": "Upma",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 20,
-        "price": 60.0
-    },
-    {
-        "id": "f6g7h8j9",
-        "category": "Breakfast",
-        "name": "Puri Bhaji",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 16,
-        "price": 85.0
-    },
-    {
-        "id": "g7h8j9k1",
-        "category": "Breakfast",
-        "name": "Chole Bhature",
-        "food_type": "Veg",
-        "unit": "2 Piece",
-        "stock": 12,
-        "price": 120.0
-    },
-    {
-        "id": "k1l2m3n4",
-        "category": "Breakfast",
-        "name": "Bread Omelette",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 19,
-        "price": 75.0
-    },
-    {
-        "id": "st01a2b3",
-        "category": "Starters",
-        "name": "Veg Manchurian",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 25,
-        "price": 160.0
-    },
-    {
-        "id": "st02b3c4",
-        "category": "Starters",
-        "name": "Chicken Wings",
-        "food_type": "Non-Veg",
-        "unit": "6 Piece",
-        "stock": 20,
-        "price": 220.0
-    },
-    {
-        "id": "st04d5e6",
-        "category": "Starters",
-        "name": "Veg Spring Roll",
-        "food_type": "Veg",
-        "unit": "2 Piece",
-        "stock": 30,
-        "price": 140.0
-    },
-    {
-        "id": "st05e6f7",
-        "category": "Starters",
-        "name": "Chicken Spring Roll",
-        "food_type": "Non-Veg",
-        "unit": "2 Piece",
-        "stock": 22,
-        "price": 180.0
-    },
-    {
-        "id": "st09j1k2",
-        "category": "Starters",
-        "name": "Mushroom Chilli",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 16,
-        "price": 170.0
-    },
-    {
-        "id": "st10k2l3",
-        "category": "Starters",
-        "name": "Fish Fingers",
-        "food_type": "Non-Veg",
-        "unit": "6 Piece",
-        "stock": 14,
-        "price": 260.0
-    },
-    {
-        "id": "ds02b3c4",
-        "category": "Desserts",
-        "name": "Jalebi",
-        "unit": "100 gm",
-        "stock": 25,
-        "price": 60.0
-    },
-    {
-        "id": "ds03c4d5",
-        "category": "Desserts",
-        "name": "Gajar Halwa",
-        "unit": "Bowl",
-        "stock": 18,
-        "price": 90.0
-    },
-    {
-        "id": "ds04d5e6",
-        "category": "Desserts",
-        "name": "Moong Dal Halwa",
-        "unit": "Bowl",
-        "stock": 15,
-        "price": 110.0
-    },
-    {
-        "id": "ds06f7g8",
-        "category": "Desserts",
-        "name": "Rabri",
-        "unit": "Bowl",
-        "stock": 16,
-        "price": 80.0
-    },
-    {
-        "id": "ds07g8h9",
-        "category": "Desserts",
-        "name": "Chocolate Brownie",
-        "unit": "1 Piece",
-        "stock": 22,
-        "price": 120.0
-    },
-    {
-        "id": "ds08h9j1",
-        "category": "Desserts",
-        "name": "Fruit Salad",
-        "unit": "Bowl",
-        "stock": 19,
-        "price": 150.0
     },
     {
         "id": "bv01a2b3",
@@ -446,120 +519,76 @@
         "price": 150.0
     },
     {
-        "id": "mc01a2b3",
-        "category": "Main Course",
-        "name": "Jeera Rice",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 20,
-        "price": 140.0
+        "id": "f1a2b3c4",
+        "category": "Desserts",
+        "name": "Gulab Jamun",
+        "unit": "2 Piece",
+        "stock": 23,
+        "price": 80.0
     },
     {
-        "id": "mc02b3c4",
-        "category": "Main Course",
-        "name": "Veg Pulao",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 18,
-        "price": 180.0
+        "id": "e5f6g7h8",
+        "category": "Desserts",
+        "name": "Rasmalai",
+        "unit": "2 Piece",
+        "stock": 17,
+        "price": 100.0
     },
     {
-        "id": "mc03c4d5",
-        "category": "Main Course",
-        "name": "Veg Fried Rice",
-        "food_type": "Veg",
-        "unit": "Full Plate",
+        "id": "t1u2v3w4",
+        "category": "Desserts",
+        "name": "Ice Cream",
+        "unit": "1 Scoop",
+        "stock": 25,
+        "price": 60.0
+    },
+    {
+        "id": "ds02b3c4",
+        "category": "Desserts",
+        "name": "Jalebi",
+        "unit": "100 gm",
+        "stock": 25,
+        "price": 60.0
+    },
+    {
+        "id": "ds03c4d5",
+        "category": "Desserts",
+        "name": "Gajar Halwa",
+        "unit": "Bowl",
+        "stock": 17,
+        "price": 90.0
+    },
+    {
+        "id": "ds04d5e6",
+        "category": "Desserts",
+        "name": "Moong Dal Halwa",
+        "unit": "Bowl",
+        "stock": 15,
+        "price": 110.0
+    },
+    {
+        "id": "ds06f7g8",
+        "category": "Desserts",
+        "name": "Rabri",
+        "unit": "Bowl",
         "stock": 16,
-        "price": 199.0
+        "price": 80.0
     },
     {
-        "id": "mc04d5e6",
-        "category": "Main Course",
-        "name": "Shahi Paneer",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 14,
-        "price": 220.0
-    },
-    {
-        "id": "mc05e6f7",
-        "category": "Main Course",
-        "name": "Malai Kofta",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 12,
-        "price": 240.0
-    },
-    {
-        "id": "mc06f7g8",
-        "category": "Main Course",
-        "name": "Chana Masala",
-        "food_type": "Veg",
-        "unit": "Full Plate",
+        "id": "ds07g8h9",
+        "category": "Desserts",
+        "name": "Chocolate Brownie",
+        "unit": "1 Piece",
         "stock": 22,
-        "price": 149.0
+        "price": 120.0
     },
     {
-        "id": "mc07g8h9",
-        "category": "Main Course",
-        "name": "Rajma",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 20,
-        "price": 199.0
-    },
-    {
-        "id": "mc11l3m4",
-        "category": "Main Course",
-        "name": "Dum Aloo",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 13,
-        "price": 160.0
-    },{
-        "id": "mc14p6q7",
-        "category": "Main Course",
-        "name": "Chicken Curry",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 16,
-        "price": 220.0
-    },
-    {
-        "id": "mc15q7r8",
-        "category": "Main Course",
-        "name": "Mutton Rogan Josh",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 10,
-        "price": 299.0
-    },
-    {
-        "id": "mc16r8s9",
-        "category": "Main Course",
-        "name": "Egg Curry",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 18,
-        "price": 160.0
-    },
-    {
-        "id": "mc17s9t1",
-        "category": "Main Course",
-        "name": "Fish Curry",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 14,
-        "price": 280.0
-    },
-    {
-        "id": "mc19u2v3",
-        "category": "Main Course",
-        "name": "Mutton Biryani",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 9,
-        "price": 300.0
+        "id": "ds08h9j1",
+        "category": "Desserts",
+        "name": "Fruit Salad",
+        "unit": "Bowl",
+        "stock": 19,
+        "price": 150.0
     },
     {
         "id": "mc20v3w4",
@@ -569,22 +598,77 @@
         "unit": "Full Plate",
         "stock": 11,
         "price": 270.0
-    },{
-        "id": "ms03c4d5",
-        "category": "Main Course",
-        "name": "Mushroom Masala",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 16,
-        "price": 210.0
     },
     {
-        "id": "ms04d5e6",
+        "id": "mc13n5p6",
         "category": "Main Course",
-        "name": "Mushroom Matar Curry",
+        "name": "Veg Kofta Curry",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 12,
+        "price": 199.0
+    },
+    {
+        "id": "mc10k2l3",
+        "category": "Main Course",
+        "name": "Mix Veg",
         "food_type": "Veg",
         "unit": "Full Plate",
         "stock": 15,
-        "price": 200.0
+        "price": 199.0
+    },
+    {
+        "id": "ms01a2b3",
+        "category": "Starters",
+        "name": "Mushroom Chilli Dry",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 18,
+        "price": 250.0
+    },
+    {
+        "id": "fd22x5y6",
+        "category": "Main Course",
+        "name": "Fish Fry",
+        "food_type": "Non-Veg",
+        "unit": "4 Piece",
+        "stock": 18,
+        "price": 240.0
+    },
+    {
+        "id": "fe23y6z7",
+        "category": "Main Course",
+        "name": "Fish Masala",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 12,
+        "price": 290.0
+    },
+    {
+        "id": "ff24z7a8",
+        "category": "Main Course",
+        "name": "Fish Tawa Fry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 10,
+        "price": 320.0
+    },
+    {
+        "id": "fi27c1d2",
+        "category": "Main Course",
+        "name": "Prawn Curry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 11,
+        "price": 380.0
+    },
+    {
+        "id": "fj28d2e3",
+        "category": "Main Course",
+        "name": "Prawn Masala",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 8,
+        "price": 400.0
     }
 ]

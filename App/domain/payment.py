@@ -62,11 +62,22 @@ class UPIPayment(Payment):
 
         try:
             payment_time=datetime.now().strftime("%d-%m-%Y %I:%M:%S %p")
-            upi_id=input("Enter UPI ID: ").strip()
 
-            if "@" not in upi_id or len(upi_id) < 5:
+
+            # upi_id=input("Enter UPI ID: ").strip()
+
+            # if "@" not in upi_id or len(upi_id) < 5:
+            #     print("❌ Invalid UPI ID format!")
+            #     return
+
+            while True:
+
+                upi_id = input("📱 Enter UPI ID: ").strip()
+
+                if "@" in upi_id and len(upi_id) >= 5:
+                    break
+
                 print("❌ Invalid UPI ID format!")
-                return
 
             print("\nSelect UPI App:")
             print("1. Google Pay")
@@ -135,21 +146,55 @@ class CardPayment(Payment):
             print("💳 CARD PAYMENT GATEWAY 💳".center(60))
             print("═" * 60)
 
-            card_no=input("🔢 Enter Card Number: ").strip()
+            # # Card Number
+            # card_no=input("🔢 Enter Card Number: ").strip()
 
-            if not card_no.isdigit() or len(card_no) != 16:
-                print("❌ Invalid Card Number!")
-                return
+            # if not card_no.isdigit() or len(card_no) != 16:
+            #     print("❌ Invalid Card Number!")
+            #     return
 
-            expiry=input("📅 Enter Expiry Date (MM/YY): ").strip()
-            if not re.match(r"^(0[1-9]|1[0-2])\/\d{2}$", expiry):
-                print("❌ Invalid Expiry Date! Use MM/YY")
-                return
+            # # Expiry Date
+            # expiry=input("📅 Enter Expiry Date (MM/YY): ").strip()
+            # if not re.match(r"^(0[1-9]|1[0-2])\/\d{2}$", expiry):
+            #     print("❌ Invalid Expiry Date! Use MM/YY")
+            #     return
             
-            cvv=input("🔒 Enter CVV: ").strip()
-            if len(cvv) != 3 or not cvv.isdigit():
-                print("❌ Invalid CVV!")
-                return
+            # # CVV
+            # cvv=input("🔒 Enter CVV: ").strip()
+            # if len(cvv) != 3 or not cvv.isdigit():
+            #     print("❌ Invalid CVV!")
+            #     return
+
+
+            # Card Number
+            while True:
+                card_no=input("🔢 Enter Card Number: ").strip()
+
+                if card_no.isdigit() and len(card_no) == 16:
+                    break
+
+                print("❌ Card Number must be exactly 16 digits!")
+
+            # Expiry Date
+            while True:
+                expiry=input("📅 Enter Expiry Date (MM/YY): ").strip()
+
+                if re.match(r"^(0[1-9]|1[0-2])\/\d{2}$", expiry):
+                    break
+
+                print("❌ Invalid Expiry Date! Use MM/YY")
+
+            # CVV
+            while True:
+                cvv=input("🔒 Enter CVV: ").strip()
+
+                if cvv.isdigit() and len(cvv) == 3:
+                    break
+
+                print("❌ CVV must be exactly 3 digits!")
+
+
+
 
             print("\nProcessing Payment...\n")
 
