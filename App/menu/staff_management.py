@@ -1,4 +1,5 @@
 from app.services.view_all_staff import ViewAllStaffService
+from app.services.staff_salary import StaffSalaryService
 
 def staff_management():
 
@@ -6,8 +7,9 @@ def staff_management():
         print("\n╔═════════════════════════════════════╗")
         print("║      👨‍💼 STAFF MANAGEMENT 👨‍💼     ║")
         print("╠═════════════════════════════════════╣")
-        print("║ 1. ➕ Add Staff(N/A)                ║")
-        print("║ 2. 📋 View All Staff                ║")
+        # print("║ 1. ➕ Add Staff(N/A)                ║")
+        print("║ 1. ➕ Add or Update Staff Salary    ║")
+        print("║ 2. 📋 All Staff Information         ║")
         print("║ 3. 🔍 Search Staff(N/A)             ║")
         print("║ 4. ✏️  Update Staff Details(N/A)     ║")
         print("║ 5. ❌ Remove Staff(N/A)             ║")
@@ -17,8 +19,7 @@ def staff_management():
         choice=input("👉 Enter your choice: ")
 
         if choice=="1":
-            print("Staff member added successfully.")
-            # add_staff()
+            StaffSalaryService("app/database/sign_up.json").assign_or_update_salary()
 
         elif choice=="2":
             ViewAllStaffService("app/database/sign_up.json").view_all_staff()

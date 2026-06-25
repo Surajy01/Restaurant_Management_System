@@ -7,7 +7,15 @@ from app.menu.order_management import order_management
 from app.order.cancel_order import CancelOrder
 
 class Staff(User):
+    def __init__(self,user_id,username,email,phone,password,dob,address,role,department,experience,salary=0):
+        super().__init__(user_id,username,email,phone,password,dob,address,role,department,experience)
+        self.salary=salary
 
+    def dict(self):
+        data=super().dict()
+        data["salary"]=self.salary
+        return data
+    
     def view_food_menu(self):
         ViewFoodManager().view_food_menu()
 
