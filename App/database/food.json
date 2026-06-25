@@ -90,12 +90,21 @@
         "price": 75.0
     },
     {
+        "id": "2bd3645a",
+        "category": "Breakfast",
+        "name": "Chicken Sausages",
+        "food_type": "Non-Veg",
+        "unit": "Half Plate",
+        "stock": 15,
+        "price": 149.0
+    },
+    {
         "id": "0652p98a",
         "category": "Starters",
         "name": "Crispy Corn",
         "food_type": "Veg",
         "unit": "Full Plate",
-        "stock": 18,
+        "stock": 17,
         "price": 199.0
     },
     {
@@ -189,12 +198,21 @@
         "price": 260.0
     },
     {
+        "id": "ms01a2b3",
+        "category": "Starters",
+        "name": "Mushroom Chilli Dry",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 18,
+        "price": 250.0
+    },
+    {
         "category": "Main Course",
         "id": "9ed17e4a",
         "name": "Rice",
         "food_type": "Veg",
         "unit": "Half Plate",
-        "stock": 11,
+        "stock": 10,
         "price": 75.0
     },
     {
@@ -203,8 +221,8 @@
         "name": "Naan ",
         "food_type": "Veg",
         "unit": "1 Peice",
-        "stock": 8,
-        "price": 40.0
+        "stock": 20,
+        "price": 50.0
     },
     {
         "id": "42ada59e",
@@ -230,7 +248,7 @@
         "name": "Dal makhani",
         "food_type": "Veg",
         "unit": "Bowl",
-        "stock": 19,
+        "stock": 18,
         "price": 150.0
     },
     {
@@ -239,7 +257,7 @@
         "name": "kadhi Paneer",
         "food_type": "Veg",
         "unit": "Half Plate",
-        "stock": 28,
+        "stock": 27,
         "price": 149.0
     },
     {
@@ -423,6 +441,78 @@
         "price": 200.0
     },
     {
+        "id": "mc20v3w4",
+        "category": "Main Course",
+        "name": "Chicken Do Pyaza",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 11,
+        "price": 270.0
+    },
+    {
+        "id": "mc13n5p6",
+        "category": "Main Course",
+        "name": "Veg Kofta Curry",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 12,
+        "price": 199.0
+    },
+    {
+        "id": "mc10k2l3",
+        "category": "Main Course",
+        "name": "Mix Veg",
+        "food_type": "Veg",
+        "unit": "Full Plate",
+        "stock": 15,
+        "price": 199.0
+    },
+    {
+        "id": "fd22x5y6",
+        "category": "Main Course",
+        "name": "Fish Fry",
+        "food_type": "Non-Veg",
+        "unit": "4 Piece",
+        "stock": 18,
+        "price": 240.0
+    },
+    {
+        "id": "fe23y6z7",
+        "category": "Main Course",
+        "name": "Fish Masala",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 12,
+        "price": 290.0
+    },
+    {
+        "id": "ff24z7a8",
+        "category": "Main Course",
+        "name": "Fish Tawa Fry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 10,
+        "price": 320.0
+    },
+    {
+        "id": "fi27c1d2",
+        "category": "Main Course",
+        "name": "Prawn Curry",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 11,
+        "price": 380.0
+    },
+    {
+        "id": "fj28d2e3",
+        "category": "Main Course",
+        "name": "Prawn Masala",
+        "food_type": "Non-Veg",
+        "unit": "Full Plate",
+        "stock": 8,
+        "price": 400.0
+    },
+    {
         "id": "h9i0j1k2",
         "category": "Beverages",
         "name": "Lassi",
@@ -459,7 +549,7 @@
         "category": "Beverages",
         "name": "Fresh Lime Water",
         "unit": "300 Ml",
-        "stock": 22,
+        "stock": 21,
         "price": 70.0
     },
     {
@@ -579,7 +669,7 @@
         "category": "Desserts",
         "name": "Chocolate Brownie",
         "unit": "1 Piece",
-        "stock": 22,
+        "stock": 21,
         "price": 120.0
     },
     {
@@ -589,86 +679,5 @@
         "unit": "Bowl",
         "stock": 19,
         "price": 150.0
-    },
-    {
-        "id": "mc20v3w4",
-        "category": "Main Course",
-        "name": "Chicken Do Pyaza",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 11,
-        "price": 270.0
-    },
-    {
-        "id": "mc13n5p6",
-        "category": "Main Course",
-        "name": "Veg Kofta Curry",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 12,
-        "price": 199.0
-    },
-    {
-        "id": "mc10k2l3",
-        "category": "Main Course",
-        "name": "Mix Veg",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 15,
-        "price": 199.0
-    },
-    {
-        "id": "ms01a2b3",
-        "category": "Starters",
-        "name": "Mushroom Chilli Dry",
-        "food_type": "Veg",
-        "unit": "Full Plate",
-        "stock": 18,
-        "price": 250.0
-    },
-    {
-        "id": "fd22x5y6",
-        "category": "Main Course",
-        "name": "Fish Fry",
-        "food_type": "Non-Veg",
-        "unit": "4 Piece",
-        "stock": 18,
-        "price": 240.0
-    },
-    {
-        "id": "fe23y6z7",
-        "category": "Main Course",
-        "name": "Fish Masala",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 12,
-        "price": 290.0
-    },
-    {
-        "id": "ff24z7a8",
-        "category": "Main Course",
-        "name": "Fish Tawa Fry",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 10,
-        "price": 320.0
-    },
-    {
-        "id": "fi27c1d2",
-        "category": "Main Course",
-        "name": "Prawn Curry",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 11,
-        "price": 380.0
-    },
-    {
-        "id": "fj28d2e3",
-        "category": "Main Course",
-        "name": "Prawn Masala",
-        "food_type": "Non-Veg",
-        "unit": "Full Plate",
-        "stock": 8,
-        "price": 400.0
     }
 ]

@@ -53,7 +53,8 @@ def auth_menu():
                         address=user["address"],
                         role=user["role"],
                         department=user["department"],
-                        experience=user["experience"]
+                        experience=user["experience"],
+                        salary=user.get("salary", 0)
                     )
                     staff_menu(staff)
 
