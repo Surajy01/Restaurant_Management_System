@@ -61,10 +61,12 @@ Supports multiple payment methods:
 - Card Payment
 - UPI Payment
 
+<!--
 Features:
 - Payment Validation
 - Payment Status Tracking
 - Invoice Generation
+-->
 
 ---
 
@@ -255,7 +257,7 @@ Restaurant_Management_System/
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Surajy01/Restaurant_Management_System.git
 ```
 
 2. Navigate to project folder
